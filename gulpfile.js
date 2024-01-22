@@ -1,12 +1,6 @@
-// import dartSass from 'sass';
-// import gulpSass from 'gulp-sass';
-// const sass = gulpSass(dartSass);
-
 const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const git = require('gulp-git');
-
-
 
 // Task لنسخ المشروع إلى مستودع Git
 gulp.task('git-add', () => {
@@ -37,7 +31,6 @@ gulp.task('git-add-remote', () => {
 });
 // Task لتنفيذ كل الخطوات (إضافة، commit، رفع) إلى مستودع GitHub
 gulp.task('github', gulp.series('git-add', 'git-commit','git-push' ,'git-upload-to-github'));
-
 
 //#########################################
 
