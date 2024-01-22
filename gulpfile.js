@@ -41,7 +41,7 @@ gulp.task('git-add-remote', () => {
 });
 
 // Task لتنفيذ كل الخطوات (إضافة، commit، رفع) إلى مستودع GitHub
-gulp.task('github', gulp.series('git-add', 'git-commit', 'git-upload-to-github'));
+gulp.task('github', gulp.series('git-add', 'git-commit','git-push' ,'git-upload-to-github'));
 
 // يمكنك تحديد task "default" لتنفيذها ببساطة بكتابة gulp في سطر الأوامر
 //gulp.task('default', gulp.series('git-add', 'git-commit', 'git-upload-to-github'));
