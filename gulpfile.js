@@ -26,13 +26,13 @@ gulp.task('git-commit', () => {
 
 // Task لرفع التغييرات إلى مستودع Git
 gulp.task('git-push', (cb) => {
-  git.push('origin', 'master', cb);
+  git.push('origin', 'main', cb);
 });
 
 
 // Task لرفع المشروع إلى مستودع GitHub
 gulp.task('git-upload-to-github', (cb) => {
-  git.push('origin', 'master', { args: '--tags' }, cb);
+  git.push('origin', 'main', { args: '--tags' }, cb);
 });
 
 // Task لربط مستودع GitHub بمشروعك
